@@ -14,20 +14,21 @@
 
 
 
-// component
-function Homepage()  {
+// component, pass props
+function Homepage(props)  {
  
     return (
         <React.Fragment>
-        <div class="welcome">
-            <h2>"My name is Balloonicorn, let's play!"</h2>
-            <a href="/cards"> Cards page </a>
-            <img src="/static/img/balloonicorn.jpg"></img>
-        </div>
+        
+        <h2>"My name is Balloonicorn, let's play!"</h2>
+        <a href="/cards"> Cards page </a>
+        <img src="/static/img/balloonicorn.jpg"></img>
+
         </React.Fragment>
     );
     
 }
 
-// component to render
-ReactDOM.render(<Homepage />, document.querySelector('#app'));
+// component to render, on node we query by id
+
+ReactDOM.render(<Homepage />, document.getElementById('app'));
