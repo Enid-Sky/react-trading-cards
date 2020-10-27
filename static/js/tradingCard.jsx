@@ -61,24 +61,28 @@ function TradingCard(props) {
   );
 }
 
-function TradingCardContainer(tradingCardData) {
-    
+function TradingCardContainer(props) {
     
     const tradingCards = [];
     for (const card of tradingCardData) {
-        tradingCards.push(<TradingCard
-        name = {card.name}
-        skill = {card.skill}
-        img = {card.imgUrl}
+        tradingCards.push(
+            <TradingCard
+            name = {card.name}
+            skill = {card.skill}
+            img = {card.imgUrl}
 
-        />)
+            />
+        );
  
-    };
+    }
 
     return  (
-        <div>
+        //we can handle any number of cards added
+        <React.Fragment>
+        {/* <div> */}
         {tradingCards}
-        </div>
+        {/* </div> */}
+        </React.Fragment>
     );
        
 }
